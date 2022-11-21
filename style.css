@@ -1,0 +1,122 @@
+
+
+h3{
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+font-size: 50px;
+width: 500px;
+border-radius: 100px;
+color: white;
+}
+:root {
+    --main: #FFD166;
+    --secondary: #800080;
+    --tertiary: #;
+    --light: white;
+    --dark: black;
+  }
+  
+  main {
+    width: 70%;
+    max-width: 800px;
+    margin: auto;
+    padding: 5%;
+    border-radius: 10px;
+    border: solid 3px var(--secondary);
+    box-shadow: 5px 5px 0 var(--secondary);
+  }
+  
+  h1 {
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2em;
+  }
+  
+  h1:after {
+    content: "";
+    width: 25%;
+    height: 0.7em;
+    background: var(--main);
+    margin: 0 auto;
+    display: block;
+    transform: translateY(-90%);
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    opacity: 0.50;
+    position: relative;
+    z-index: -1;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    border: solid 2px var(--secondary);
+    background-color: white;
+    color: var(--secondary);
+    padding: 0 12px;
+    font-size: 1.2em;
+    height: 2.3em;
+    position: relative;
+    box-shadow: 5px 5px 0 var(--main);
+    z-index: 2;
+    border-radius: 5px;
+  }
+  
+  
+  .btn:hover {
+    cursor: pointer;
+  }
+  
+  .btn:before {
+    content: '';
+    width: 0;
+    height: 0;
+    bottom: 0px;
+    right: 0px;
+    position: absolute;
+    z-index: -1;
+    background: var(--main);
+    transition: width .3s, height .3s;
+    border-top-left-radius: 5px;
+  }
+  
+  
+  .btn:hover:before{
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+  }
+  
+  
+  /***** Variations *******/
+  
+  .btn.primary:before {
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+  }
+  
+  .btn.primary:hover:before {
+    width: 0;
+    height: 0;
+  }
+  
+  .btn.tertiary {
+    border-color: transparent;
+    transition: border-color .2s;
+  }
+  
+  .btn.tertiary:hover {
+    border-color: var(--secondary)
+  }
+  canvas:hover{
+    animation-name: ilumination;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    
+  }
+  @keyframes ilumination{
+    from{box-shadow: 50px 1px 100px rgb(0, 225, 255);}
+    to{box-shadow: 50px 1px 100px rgb(255, 0, 0);}
+}
